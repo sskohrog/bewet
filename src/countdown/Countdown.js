@@ -45,7 +45,13 @@ export const Countdown = () => {
       );
     } else {
       return (
-        <Box sx={{ display: 'flex', color: 'white' }}>
+        <Box
+          sx={{
+            display: 'flex',
+            color: 'white',
+            flexFlow: { xs: 'column', sm: 'row' }
+          }}
+        >
           {Object.entries({ days, hours, minutes, seconds }).map(
             ([key, value]) => (
               <Box
@@ -53,8 +59,15 @@ export const Countdown = () => {
                   display: 'flex',
                   flexFlow: 'column',
                   alignItems: 'center',
-                  padding: '0 40px',
-                  borderRight: key !== 'seconds' ? '0.5px solid white' : 'none'
+                  padding: { xs: '12px 0', sm: '0 40px' },
+                  borderRight: {
+                    xs: 'none',
+                    sm: key !== 'seconds' ? '0.5px solid white' : 'none'
+                  },
+                  borderBottom: {
+                    xs: key !== 'seconds' ? '0.5px solid white' : 'none',
+                    sm: 'none'
+                  }
                 }}
               >
                 <Typography
