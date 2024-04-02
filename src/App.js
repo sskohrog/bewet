@@ -1,24 +1,34 @@
-import logo from './logo.svg';
+import React from 'react';
+import { Route, Routes } from 'react-router-dom';
+
+import { Landing } from './landing/Landing';
+import { SchedulingPage } from './scheduler/SchedulingPage';
+import { FirebaseProvider, FirebaseContext } from './global/FirebaseContext';
+
 import './App.css';
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
+import { Countdown } from './countdown/Countdown';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <FirebaseProvider>
+      <FirebaseContext.Consumer>
+        {({ firebaseDB, addEmailToList }) => {
+          return firebaseDB ? (
+            <Routes>
+              <Route path='/' element={<Landing />} />
+              <Route path='/countdown' element={<Countdown />} />
+              <Route path='/scheduler' element={<SchedulingPage />} />
+            </Routes>
+          ) : (
+            <></>
+          );
+        }}
+      </FirebaseContext.Consumer>
+    </FirebaseProvider>
   );
 }
 
