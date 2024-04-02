@@ -96,21 +96,10 @@ export const Countdown = () => {
       >
         <Box>
           <CountdownWidget
-            date={new Date('05/31/2024')}
+            date={new Date('05/01/2024')}
             renderer={displayTimer}
           />
         </Box>
-        {/* <Box
-          sx={{
-            backgroundColor: 'white',
-            padding: '8px',
-            borderRadius: '4px',
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            mt: '30px'
-          }}
-        > */}
         <TextField
           id='outlined-basic'
           label='JOIN WAITLIST'
@@ -151,7 +140,6 @@ export const Countdown = () => {
             )
           }}
         />
-        {/* </Box> */}
       </Box>
     </Grid>
   );
