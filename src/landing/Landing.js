@@ -70,8 +70,7 @@ export const Landing = () => {
           onClick={() => navigate('/countdown')}
           // onClick={() => navigate('/scheduler')}
         >
-          {/* Enter Experience */}
-          Join Waitlist
+          Enter Experience
         </Button>
       </Box>
     </Grid>
