@@ -146,13 +146,21 @@ export const Countdown = () => {
               <IconButton
                 color={error ? 'error' : 'default'}
                 sx={{ marginLeft: '10px' }}
-                onClick={handleJoinWaitlist}
+                onClick={() => window.open('mailto:info@bewetsuits.com')}
               >
                 <EmailIcon />
               </IconButton>
             )
           }}
         />
+        <Typography variant='h6' mt='18px'>
+          <a
+            href='mailto:info@bewetsuits.com'
+            style={{ textDecoration: 'none', color: 'white' }}
+          >
+            info@bewetsuits.com
+          </a>
+        </Typography>
       </Box>
     </Grid>
   );
