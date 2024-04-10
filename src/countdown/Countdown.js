@@ -155,7 +155,7 @@ export const Countdown = () => {
         />
 
         <a
-          // href='mailto:info@bewetsuits.com'
+          href='mailto:info@bewetsuits.com'
           style={{ textDecoration: 'none', color: 'white' }}
         >
           <Typography variant='h6' mt='18px'>
