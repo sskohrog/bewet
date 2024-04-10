@@ -3,6 +3,7 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
+import MenuIcon from '@mui/icons-material/MenuRounded';
 
 export const Header = () => {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -23,12 +24,10 @@ export const Header = () => {
         onClick={handleClick}
         sx={{
           color: 'white',
-          fontSize: '16px',
-          letterSpacing: '6px',
           float: 'right'
         }}
       >
-        MENU
+        <MenuIcon sx={{ fontSize: '30px' }} />
       </Button>
       <Menu
         id='basic-menu'
@@ -40,14 +39,14 @@ export const Header = () => {
         }}
         sx={{
           '& .MuiPaper-root': {
-            backgroundColor: 'rgba(255, 255, 255, 0.5)'
+            backgroundColor: 'rgba(0, 0, 0, 0.7)'
           }
         }}
       >
         <MenuItem onClick={handleClose}>
           <a
             href='https://bewet-appointments.square.site'
-            style={{ textDecoration: 'none', color: 'black' }}
+            style={{ textDecoration: 'none', color: 'white' }}
           >
             GET MEASURED
           </a>

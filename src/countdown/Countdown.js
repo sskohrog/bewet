@@ -153,14 +153,15 @@ export const Countdown = () => {
             )
           }}
         />
-        <Typography variant='h6' mt='18px'>
-          <a
-            href='mailto:info@bewetsuits.com'
-            style={{ textDecoration: 'none', color: 'white' }}
-          >
+
+        <a
+          // href='mailto:info@bewetsuits.com'
+          style={{ textDecoration: 'none', color: 'white' }}
+        >
+          <Typography variant='h6' mt='18px'>
             info@bewetsuits.com
-          </a>
-        </Typography>
+          </Typography>
+        </a>
       </Box>
     </Grid>
   );
