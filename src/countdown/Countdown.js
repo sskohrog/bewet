@@ -109,7 +109,7 @@ export const Countdown = () => {
       >
         <Box>
           <CountdownWidget
-            date={new Date('05/01/2024')}
+            date={new Date('06/01/2024')}
             renderer={displayTimer}
           />
         </Box>
